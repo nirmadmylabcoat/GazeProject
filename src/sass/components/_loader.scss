@@ -1,0 +1,61 @@
+body.loading {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.loader {
+  .loader-inner {
+    .image-block {
+      position: absolute;
+      transform-origin: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &.model1a {
+        width: 200px;
+        left: 14%;
+        bottom: 10%;
+        @media (max-width: $layout-breakpoint-small) {
+          width: 100px;
+          left: 4%;
+          bottom: 20%;
+        }
+      }
+      &.model2a {
+        width: 200px;
+        right: 16%;
+        top: 8%;
+        @media (max-width: $layout-breakpoint-small) {
+          width: 110px;
+          top: 18%;
+          right: 5%;
+        }
+      }
+      &.model3a {
+        max-width: 200px;
+        width: 40%;
+        right: 14%;
+        bottom: 6%;
+        @media (max-width: $layout-breakpoint-small) {
+          width: 110px;
+          right: 3%;
+          bottom: 22%;
+        }
+      }
+      &.model {
+        width: 200px;
+        left: 16%;
+        top: 10%;
+        @media (max-width: $layout-breakpoint-small) {
+          width: 100px;
+          left: 5%;
+          top: 22%;
+        }
+      }
+      img {
+        width: 100%;
+        object-fit: fill;
+      }
+    }
+  }
+}
