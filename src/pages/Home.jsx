@@ -11,6 +11,7 @@ import Banner from "../components/Home/Banner.jsx";
 import Loader from "../components/Home/Loader.jsx";
 import Example from "../components/Home/Scroll.jsx";
 import CustomCursor from "../components/Global/CustomCursor.jsx";
+import ShopBanner from "../components/Home/ShopBanner.jsx";
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -46,6 +47,7 @@ function Home() {
             />
           </div>
           <Example />
+          <ShopBanner />
         </>
       )}
     </motion.div>

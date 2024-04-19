@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-
 //variants
 const banner = {
   animate: {
@@ -62,7 +61,6 @@ const AnimatedLetters = ({ title, disabled }) => (
   </motion.span>
 );
 
-
 const BannerRowTop = ({ title }) => {
   return (
     <div className={"banner-row"}>
@@ -74,13 +72,14 @@ const BannerRowTop = ({ title }) => {
         initial={{ opacity: 0, y: 80 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
-          ease: 'easeInOut',
+          ease: "easeInOut",
           duration: 1,
           delay: 0.4,
         }}
       >
         <span className="row-message">
-          Turn Heads With Our Chicest Fashion Picks, Grab Yours Now. Only On Gaze.
+          Turn Heads With Our Chicest Fashion Picks, Grab Yours Now. Only On
+          Gaze.
         </span>
       </motion.div>
     </div>
