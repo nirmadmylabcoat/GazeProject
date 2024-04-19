@@ -5,6 +5,10 @@ import React from "react";
 
 const Example = () => {
   return (
+    <motion.div className="scroll"
+    initial={{ opacity: 0, y: -180}}
+    animate={{ opacity: 1, y: 0}}
+    transition={{ ease: "easeInOut", duration: 1, delay: .6}}>
     <div className="bg-neutral-800">
       <div className="flex h-48 items-center justify-center">
         <span className="font-semibold uppercase text-neutral-500">
@@ -18,6 +22,7 @@ const Example = () => {
         </span>
       </div>
     </div>
+    </motion.div>
   );
 };
 

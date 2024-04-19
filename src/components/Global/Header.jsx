@@ -1,33 +1,35 @@
 import React from "react";
 import {motion} from "framer-motion";
+import {Link} from 'react-router-dom'
 
-const Header = () => {
+const Header = ({bgColor}) => {
   return (
-    <motion.div className="header"
+    <motion.div className="header" 
+    style={{ backgroundColor: bgColor }}
     initial={{ opacity: 0, y: -180}}
     animate={{ opacity: 1, y: 0}}
-    transition={{ ease: "easeInOut", duration: 1, delay: .6}}>
+    transition={{ ease: "easeInOut", duration: 0.8, delay: 0}}>
       <div className="header-inner">
-        <div className="logo">gaze.</div>
+        <Link className="logo" to = "/" >gaze.</Link>
         <nav className="nav">
           <li>
-            <a href="/design">Men</a>
+            <Link to="/menshop">Men</Link>
           </li>
           <li>
-            <a href="/womenshop">Women</a>
+            <Link to="/womenshop">Women</Link>
           </li>
           <li>
-            <a href="/cases">Trending Collection</a>
+            <Link to="/trending">Trending Collection</Link>
           </li>
           <li>
-            <a href="/about">About</a>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <a href="/why">Why choose us?</a>
+            <Link to="/why">Why choose us?</Link>
           </li>
         </nav>
         <div className="contact">
-          <a href="/contact">Shopping Cart</a>
+          <Link to="/cart">Shopping Cart</Link>
         </div>
         <div className="hamburger-menu">
           <span></span>

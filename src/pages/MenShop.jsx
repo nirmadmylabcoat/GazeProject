@@ -1,6 +1,6 @@
 import React from "react";
 import CustomCursor from "../components/Global/CustomCursor";
-import WomenHero from "../components/WomenShop/WomenHero";
+import MenHero from "../components/MenShop/MenHero";
 import Header from "../components/Global/Header";
 import Transition from "../Transition";
 
@@ -8,8 +8,8 @@ import Transition from "../Transition";
 const WomenShop = () => {
   return (
     <>
-      <Header bgColor={"#f7d7d2"}/>
-      <WomenHero />
+      <Header bgColor={"#906750"}/>
+      <MenHero />
       <CustomCursor />
     </>
   );

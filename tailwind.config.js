@@ -22,7 +22,8 @@ module.exports = {
         secondary: '#F5E6E0',
       },
       backgroundImage: {
-        hero: "url('./img/bg_hero.png')",
+        Womenhero: "url('./img/women_bg.png')",
+        Menhero: "url('./img/men_bg.png')"
       },
     },
   },

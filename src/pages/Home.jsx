@@ -3,13 +3,14 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion"; // Import only motion
 import { cubicBezier } from "framer-motion"
 import "../sass/main.scss";
+import Transition from "../Transition.jsx";
 
 // Components
-import Header from "../components/Header.jsx";
-import Banner from "../components/Banner.jsx";
-import Loader from "../components/Loader.jsx";
-import Example from "../components/Scroll.jsx";
-import CustomCursor from "../components/CustomCursor.jsx";
+import Header from "../components/Global/Header.jsx";
+import Banner from "../components/Home/Banner.jsx";
+import Loader from "../components/Home/Loader.jsx";
+import Example from "../components/Home/Scroll.jsx";
+import CustomCursor from "../components/Global/CustomCursor.jsx";
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -37,7 +38,7 @@ function Home() {
               layoutId="main-image-1"
               variants={{
                 // Define variants directly for better organization
-                visible: { opacity: 1, scale: 1, transition: { ease: [0.6, 0.01, 0.05, 0.95], duration: 1.6 } },
+                visible: { opacity: 1, scale: 1, transition: { ease: [0.6, 0.01, 0.05, 0.9], duration: 1.6 } },
                 hidden: { opacity: 0, scale: 0 },
               }}
               initial="hidden" // Set initial state
@@ -51,4 +52,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Transition(Home);
