@@ -33,7 +33,7 @@ function Home() {
           <Banner />
           <div className="transition-image final">
             <motion.img
-              src={"/images/models.jpg"} // Use forward slash for path
+              src={"/images/models.webp"} // Use forward slash for path
               alt="boo"
               layoutId="main-image-1"
               variants={{
