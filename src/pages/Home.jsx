@@ -29,7 +29,7 @@ function Home() {
         </motion.div>
       ) : (
         <>
-          <Header delay={"0.6"}/>
+          <Header delay={"0.6"} duration={"0.8"}/>
           <Banner />
           <div className="transition-image final">
             <motion.img
