@@ -53,7 +53,7 @@ const Card = ({ card }) => {
         }}
         className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"></div>
       <div className="absolute grid inset-0 z-10 place-content-end">
-        <p className="p-8 text-2xl font-normal text-white">
+        <p className="p-8 text-2xl uppercase font-normal text-white">
           {card.title}
         </p>
       </div>
@@ -71,7 +71,7 @@ const cards = [
   },
   {
     url: "/images/model2b.webp",
-    title: "Title 2",
+    title: "sports wear",
     id: 2,
   },
 ];
