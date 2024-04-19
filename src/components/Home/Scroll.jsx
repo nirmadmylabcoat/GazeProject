@@ -9,18 +9,8 @@ const Example = () => {
     initial={{ opacity: 0, y: -180}}
     animate={{ opacity: 1, y: 0}}
     transition={{ ease: "easeInOut", duration: 1, delay: .6}}>
-    <div className="bg-neutral-800">
-      <div className="flex h-48 items-center justify-center">
-        <span className="font-semibold uppercase text-neutral-500">
-          Scroll down
-        </span>
-      </div>
+    <div className="bg-neutral-900">
       <Scroll />
-      <div className="flex h-48 items-center justify-center">
-        <span className="font-semibold uppercase text-neutral-500">
-          Scroll up
-        </span>
-      </div>
     </div>
     </motion.div>
   );
@@ -37,6 +27,9 @@ const Scroll = () => {
   return (
     <section ref={targetRef} className="relative h-[300vh] bg-neutral-900">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+        <span className="font-semibold uppercase text-neutral-500 text-[12rem] ml-4">
+          TRENDING COLLECTION
+        </span>
         <motion.div style={{ x }} className="flex gap-4">
           {cards.map((card) => {
             return <Card card={card} key={card.id} />;
@@ -51,18 +44,16 @@ const Card = ({ card }) => {
   return (
     <div
       key={card.id}
-      className="group relative h-[450px] w-[450px] overflow-hidden bg-neutral-200"
-    >
+      className="group relative h-[450px] w-[450px] overflow-hidden bg-neutral-200">
       <div
         style={{
           backgroundImage: `url(${card.url})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
-      ></div>
-      <div className="absolute inset-0 z-10 grid place-content-center">
-        <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-6xl font-black uppercase text-white backdrop-blur-lg">
+        className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"></div>
+      <div className="absolute grid inset-0 z-10 place-content-end">
+        <p className="p-8 text-2xl font-normal text-white">
           {card.title}
         </p>
       </div>
@@ -75,7 +66,7 @@ export default Example;
 const cards = [
   {
     url: "/images/model1b.webp",
-    title: "Title 1",
+    title: "SATIN PINK BODYCON DRESS",
     id: 1,
   },
   {
