@@ -1,8 +1,8 @@
 // import house images
-import House1 from './assets/img/houses/house1.png';
-import House2 from './assets/img/houses/house2.png';
-import House3 from './assets/img/houses/house3.png';
-import House4 from './assets/img/houses/house4.png';
+import model1a from '/images/model5a.jpg';
+import model2a from '/images/model8a.jpg';
+import model3a from '/images/model9a.jpg';
+import model4a from '/images/model7a.jpg';
 import House5 from './assets/img/houses/house5.png';
 import House6 from './assets/img/houses/house6.png';
 import House7 from './assets/img/houses/house7.png';
@@ -57,24 +57,11 @@ import Agent12 from './assets/img/agents/agent12.png';
 const housesData = [
     {
       id: 1,
-      type: 'House',
-      name: 'House 1',
-      description:
-        'In a serene garden setting, this elegant home exudes timeless charm and tranquility. From the inviting entrance to the sunlit living spaces, every detail speaks of sophistication. The gourmet kitchen and cozy master suite offer comfort and luxury, while outdoor areas beckon for relaxation and al fresco dining. Welcome to a dreamy retreat where every moment is a testament to refined living.',
-      image: House1,
-      imageLg: House1Lg,
-      country: 'United States',
-      address: '7240C Argyle St. Lawndale, CA 90260',
-      bedrooms: '6',
-      bathrooms: '3',
-      surface: '4200 sq ft',
-      year: '2016',
-      price: '110000',
-      agent: {
-        image: Agent1,
-        name: 'Patricia Tullert',
-        phone: '0123 456 78910',
-      },
+      type: 'jackets',
+      name: 'Black Leather Jacket',
+      description: ' ',
+      image: model1a,
+      price: '1199',
     },
     {
       id: 2,
@@ -82,7 +69,7 @@ const housesData = [
       name: 'House 2',
       description:
         'In a serene garden setting, this elegant home exudes timeless charm and tranquility. From the inviting entrance to the sunlit living spaces, every detail speaks of sophistication. The gourmet kitchen and cozy master suite offer comfort and luxury, while outdoor areas beckon for relaxation and al fresco dining. Welcome to a dreamy retreat where every moment is a testament to refined living.',
-      image: House2,
+      image: model2a,
       imageLg: House2Lg,
       country: 'Canada',
       address: '798 Talbot St. Bridgewater, NJ 08807',
@@ -100,10 +87,10 @@ const housesData = [
     {
       id: 3,
       type: 'House',
-      name: 'House 3',
+      name: 'Rugrats Oversized Tee',
       description:
         'In a serene garden setting, this elegant home exudes timeless charm and tranquility. From the inviting entrance to the sunlit living spaces, every detail speaks of sophistication. The gourmet kitchen and cozy master suite offer comfort and luxury, while outdoor areas beckon for relaxation and al fresco dining. Welcome to a dreamy retreat where every moment is a testament to refined living.',
-      image: House3,
+      image: model3a,
       imageLg: House3Lg,
       country: 'United States',
       address: '2 Glen Creek St. Alexandria, VA 22304',
@@ -111,7 +98,7 @@ const housesData = [
       bathrooms: '3',
       surface: '4200 sq ft',
       year: '2016',
-      price: '170000',
+      price: '799',
       agent: {
         image: Agent3,
         name: 'Amado Smith',
@@ -124,7 +111,7 @@ const housesData = [
       name: 'House 4',
       description:
         'In a serene garden setting, this elegant home exudes timeless charm and tranquility. From the inviting entrance to the sunlit living spaces, every detail speaks of sophistication. The gourmet kitchen and cozy master suite offer comfort and luxury, while outdoor areas beckon for relaxation and al fresco dining. Welcome to a dreamy retreat where every moment is a testament to refined living.',
-      image: House4,
+      image: model4a,
       imageLg: House4Lg,
       country: 'Canada',
       address: '84 Woodland St. Cocoa, FL 32927',
