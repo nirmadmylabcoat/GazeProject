@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import WomanHero from "../../img/woman_hero.png";
 import leaf from "../../img/leaf.png";
@@ -7,10 +7,21 @@ import gsap from "gsap";
 // import { Link } from "react-router-dom";
 
 const Hero = () => {
+  useEffect(()=>{
+    const heroPage = document.querySelector("#womenHeroPage");
+    const leafMove = document.querySelectorAll(".leaf");
+  
+    heroPage.addEventListener("mousemove", function (dets) {
+      gsap.to(leafMove, {
+        x: -dets.x / 30,
+        y: -dets.y / 30,
+      });
+    });
+  })
   return (
     <section
       className="bg-pink-200 h-[760px] bg-Womenhero bg-no-repeat bg-cover bg-center py-24"
-      id="heroPage"
+      id="womenHeroPage"
     >
       {/* top leaves */}
       <div className="absolute z-10 leaf -mt-[40px] ml-[180px] rotate-90 opacity-55">
@@ -69,16 +80,6 @@ const Hero = () => {
   );
 };
 
-window.onload = () => {
-  const heroPage = document.querySelector("#heroPage");
-  const leafMove = document.querySelectorAll(".leaf");
-
-  heroPage.addEventListener("mousemove", function (dets) {
-    gsap.to(leafMove, {
-      x: -dets.x / 30,
-      y: -dets.y / 30,
-    });
-  });
-};
+  
 
 export default Hero;

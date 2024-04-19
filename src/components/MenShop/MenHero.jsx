@@ -9,39 +9,8 @@ const Hero = () => {
   return (
     <section
       className="bg-[#906750] h-[760px] bg-no-repeat bg-cover bg-center py-24 bg-Menhero overflow-hidden"
-      id="heroPage"
+      id="menHeroPage"
     >
-      {/* top leaves */}
-      {/* <div className="absolute z-10 leaf -mt-[80px] ml-[180px] rotate-90 opacity-100">
-        <img src={leaf} alt="leaf" className="w-28" />
-      </div>
-      <div className="absolute z-10 leaf mt-[10px] ml-[70px] rotate-90 opacity-100">
-        <img src={leaf} alt="leaf" className="w-28" />
-      </div> */}
-
-      {/* middle leaves*/}
-      {/* <div className="absolute z-10 leaf mt-[380px] ml-[500px] -rotate-90 opacity-100">
-        <img src={leaf} alt="leaf" className="w-28" />
-      </div>
-      <div className="absolute z-10 leaf mt-[420px] ml-[550px] scale-50 -rotate-45 opacity-100">
-        <img src={leaf} alt="leaf" className="w-28" />
-      </div> */}
-
-      {/* bottom */}
-      {/* <div className="absolute z-10 leaf mt-[520px] ml-[30px] -rotate-90 opacity-100">
-        <img src={leaf} alt="leaf" className="w-28" />
-      </div>
-      <div className="absolute z-10 leaf mt-[450px] ml-[140px] scale-50 opacity-100">
-        <img src={leaf} alt="leaf" className="w-28" />
-      </div> */}
-
-      {/* right bottom leaves */}
-      {/* <div className="absolute z-10 leaf mt-[450px] ml-[1350px] rotate-180 opacity-100">
-        <img src={leaf} alt="leaf" className="w-28" />
-      </div>
-      <div className="absolute z-10 leaf mt-[520px] ml-[1300px] -rotate-90 scale-75 opacity-100">
-        <img src={leaf} alt="leaf" className="w-28" />
-      </div> */}
 
       {/* bg */}
       <div className="container mx-auto flex justify-around h-full z-20 w-[90vw]">
@@ -68,16 +37,5 @@ const Hero = () => {
   );
 };
 
-window.onload = () => {
-  const heroPage = document.querySelector("#heroPage");
-  const leafMove = document.querySelectorAll(".leaf");
-
-  heroPage.addEventListener("mousemove", function (dets) {
-    gsap.to(leafMove, {
-      x: -dets.x / 30,
-      y: -dets.y / 30,
-    });
-  });
-};
 
 export default Hero;
