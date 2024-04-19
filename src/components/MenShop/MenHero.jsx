@@ -7,7 +7,7 @@ import menHero from "../../img/men_hero.png";
 const Hero = () => {
   return (
     <section
-      className="bg-[#906750] h-[760px] bg-no-repeat bg-cover bg-center py-24 bg-Menhero overflow-hidden"
+      className="bg-[#906750] h-[760px] bg-Menhero bg-no-repeat bg-cover bg-center py-24 overflow-hidden"
       id="menHeroPage"
     >
 
@@ -23,7 +23,7 @@ const Hero = () => {
           </h1>
         </div>
         <div className="hidden lg:block z-30">
-          <img src={menHero} alt="womanHero" className="z-30 h-[800px]" />
+          <img src={menHero} alt="womanHero" className="z-30 h-[800px] object-cover" />
         </div>
       </div>
 

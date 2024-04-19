@@ -57,18 +57,18 @@ import Agent12 from './assets/img/agents/agent12.png';
 const housesData = [
     {
       id: 1,
-      type: 'jackets',
-      name: 'Black Leather Jacket',
+      gender: 'men',
+      type: 'shirts',
+      name: 'Denim Full Sleeve Shirt',
       description: ' ',
       image: model1a,
       price: '1199',
     },
     {
       id: 2,
-      type: 'House',
-      name: 'House 2',
-      description:
-        'In a serene garden setting, this elegant home exudes timeless charm and tranquility. From the inviting entrance to the sunlit living spaces, every detail speaks of sophistication. The gourmet kitchen and cozy master suite offer comfort and luxury, while outdoor areas beckon for relaxation and al fresco dining. Welcome to a dreamy retreat where every moment is a testament to refined living.',
+      type: 'shirts',
+      name: 'Off White Button Up Shirt',
+      description: 'Off White Button Up Shirt',
       image: model2a,
       imageLg: House2Lg,
       country: 'Canada',
@@ -77,7 +77,7 @@ const housesData = [
       bathrooms: '3',
       surface: '4200 sq ft',
       year: '2016',
-      price: '140000',
+      price: '1499',
       agent: {
         image: Agent2,
         name: 'Daryl Hawker',
@@ -86,7 +86,7 @@ const housesData = [
     },
     {
       id: 3,
-      type: 'House',
+      type: 'oversized t-shirts',
       name: 'Rugrats Oversized Tee',
       description:
         'In a serene garden setting, this elegant home exudes timeless charm and tranquility. From the inviting entrance to the sunlit living spaces, every detail speaks of sophistication. The gourmet kitchen and cozy master suite offer comfort and luxury, while outdoor areas beckon for relaxation and al fresco dining. Welcome to a dreamy retreat where every moment is a testament to refined living.',
