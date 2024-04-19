@@ -1,7 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion"; // Import only motion
-import { cubicBezier } from "framer-motion"
 import "../sass/main.scss";
 import Transition from "../Transition.jsx";
 
@@ -30,7 +29,7 @@ function Home() {
         </motion.div>
       ) : (
         <>
-          <Header />
+          <Header delay={"0.6"}/>
           <Banner />
           <div className="transition-image final">
             <motion.img

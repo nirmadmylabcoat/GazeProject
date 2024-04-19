@@ -1,7 +1,6 @@
 import React from "react";
 
 import menHero from "../../img/men_hero.png";
-import gsap from "gsap";
 
 // import { Link } from "react-router-dom";
 
