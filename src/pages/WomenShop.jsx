@@ -11,7 +11,7 @@ const WomenShop = () => {
       <CustomCursor />
       <Header bgColor={"#f7d7d2"} delay={"0"} duration={"0"}/>
       <WomenHero />
-      <ProductList />
+      <ProductList gender={"women"}/>
     </>
   );
 };

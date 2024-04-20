@@ -1,8 +1,8 @@
 // import house images
-import model1a from '/images/model5a.jpg';
-import model2a from '/images/model8a.jpg';
-import model3a from '/images/model9a.jpg';
-import model4a from '/images/model7a.jpg';
+import model5a from '/images/model5a.jpg';
+import model7a from '/images/model7a.jpg';
+import model8a from '/images/model8a.jpg';
+import model9a from '/images/model9a.jpg';
 import House5 from './assets/img/houses/house5.png';
 import House6 from './assets/img/houses/house6.png';
 import House7 from './assets/img/houses/house7.png';
@@ -12,10 +12,10 @@ import House10 from './assets/img/houses/house10.png';
 import House11 from './assets/img/houses/house11.png';
 import House12 from './assets/img/houses/house12.png';
 // import house large images
-import House1Lg from './assets/img/houses/house1lg.png';
-import House2Lg from './assets/img/houses/house2lg.png';
-import House3Lg from './assets/img/houses/house3lg.png';
-import House4Lg from './assets/img/houses/house4lg.png';
+import model5b from '/images/model5b.jpg';
+import model7b from '/images/model7b.jpg';
+import model8b from '/images/model8b.jpg';
+import model9b from '/images/model9b.jpg';
 import House5Lg from './assets/img/houses/house5lg.png';
 import House6Lg from './assets/img/houses/house6lg.png';
 import House7Lg from './assets/img/houses/house7lg.png';
@@ -61,70 +61,39 @@ const housesData = [
       type: 'shirts',
       name: 'Denim Full Sleeve Shirt',
       description: ' ',
-      image: model1a,
+      image: model5a,
+      imageHover: model5b,
       price: '1199',
     },
     {
       id: 2,
-      type: 'shirts',
-      name: 'Off White Button Up Shirt',
-      description: 'Off White Button Up Shirt',
-      image: model2a,
-      imageLg: House2Lg,
-      country: 'Canada',
-      address: '798 Talbot St. Bridgewater, NJ 08807',
-      bedrooms: '6',
-      bathrooms: '3',
-      surface: '4200 sq ft',
-      year: '2016',
+      gender: 'men',
+      type: 'SHIRTS',
+      name: 'Casual Printed Shirt',
+      description: 'Casual Printed Shirt',
+      image: model7a,
+      imageHover: model7b,
       price: '1499',
-      agent: {
-        image: Agent2,
-        name: 'Daryl Hawker',
-        phone: '0123 456 78910',
-      },
     },
     {
       id: 3,
-      type: 'oversized t-shirts',
-      name: 'Rugrats Oversized Tee',
-      description:
-        'In a serene garden setting, this elegant home exudes timeless charm and tranquility. From the inviting entrance to the sunlit living spaces, every detail speaks of sophistication. The gourmet kitchen and cozy master suite offer comfort and luxury, while outdoor areas beckon for relaxation and al fresco dining. Welcome to a dreamy retreat where every moment is a testament to refined living.',
-      image: model3a,
-      imageLg: House3Lg,
-      country: 'United States',
-      address: '2 Glen Creek St. Alexandria, VA 22304',
-      bedrooms: '6',
-      bathrooms: '3',
-      surface: '4200 sq ft',
-      year: '2016',
+      gender: 'men',
+      type: 'shirts',
+      name: 'Off White Button Up Shirt',
+      description: 'Off White Button Up Shirt',
+      image: model8a,
+      imageHover: model8b,
       price: '799',
-      agent: {
-        image: Agent3,
-        name: 'Amado Smith',
-        phone: '0123 456 78910',
-      },
     },
     {
       id: 4,
-      type: 'House',
-      name: 'House 4',
-      description:
-        'In a serene garden setting, this elegant home exudes timeless charm and tranquility. From the inviting entrance to the sunlit living spaces, every detail speaks of sophistication. The gourmet kitchen and cozy master suite offer comfort and luxury, while outdoor areas beckon for relaxation and al fresco dining. Welcome to a dreamy retreat where every moment is a testament to refined living.',
-      image: model4a,
-      imageLg: House4Lg,
-      country: 'Canada',
-      address: '84 Woodland St. Cocoa, FL 32927',
-      bedrooms: '6',
-      bathrooms: '3',
-      surface: '4200 sq ft',
-      year: '2016',
-      price: '200000',
-      agent: {
-        image: Agent4,
-        name: 'Kaitlyn Gonzalez',
-        phone: '0123 456 78910',
-      },
+      gender: 'men',
+      type: 'oversized t-shirts',
+      name: 'Rugrats Oversized Tee',
+      description: 'Rugrats Oversized Tee',
+      image: model9a, 
+      imageHover: model9b,
+      price: '799',
     },
     {
       id: 5,
@@ -141,6 +110,7 @@ const housesData = [
       surface: '4200 sq ft',
       year: '2015',
       price: '210000',
+      gender: 'women',
       agent: {
         image: Agent5,
         name: 'Grover Robinson',
@@ -162,6 +132,7 @@ const housesData = [
       surface: '6200 sq ft',
       year: '2014',
       price: '220000',
+      gender: 'women',
       agent: {
         image: Agent6,
         name: 'Karen Sorensen',
@@ -183,6 +154,7 @@ const housesData = [
       surface: '1200 sq ft',
       year: '2012',
       price: '20000',
+      gender: 'women',
       agent: {
         image: Agent7,
         name: 'Jawhar Shamil Naser',
