@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import itemData from './Data';
 
-function ProductList() {
+function ProductList({gender}) {
   // State to keep track of which item is hovered
   const [hovered, setHovered] = useState(null);
+  const filteredProducts = itemData.filter(item => item.gender === gender)
 
   return (
     <div className="mt-20 mb-20 w-[100vw] flex justify-center">
       <div className="w-[90vw] flex flex-wrap gap-y-[5rem] justify-center">
-        {itemData.map((item, index) => {
+        {filteredProducts.map((item, index) => {
           return (
             <div 
               key={index} // It's good to have a key for list items

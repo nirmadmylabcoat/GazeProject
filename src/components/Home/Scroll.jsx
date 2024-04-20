@@ -74,4 +74,9 @@ const cards = [
     title: "sports wear",
     id: 2,
   },
+  {
+    url: "/images/model3b.webp",
+    title: "sports wear",
+    id: 3,
+  },
 ];
