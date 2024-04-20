@@ -1,7 +1,20 @@
-import React from "react";
+import React, {useEffect} from "react";
 import gsap from "gsap";
 
 const CustomCursor = () => {
+  useEffect(()=>{
+    const cursorDot = document.getElementById("cursor-dot");
+    const cursorOutline = document.getElementById("cursor-outline");
+  
+    window.addEventListener("mousemove", function (e) {
+      cursorDot.style.left = e.x+"px"
+      cursorDot.style.top = e.y+"px"
+      gsap.to(cursorOutline, {
+        x: e.x,
+        y: e.y,
+      });
+    });
+  })
   return (
     <>
       <div
@@ -16,15 +29,5 @@ const CustomCursor = () => {
   );
 };
 
-window.addEventListener("mousemove", function (e) {
-  const cursorDot = document.getElementById("cursor-dot");
-  const cursorOutline = document.getElementById("cursor-outline");
-  cursorDot.style.left = e.x+"px"
-  cursorDot.style.top = e.y+"px"
-  gsap.to(cursorOutline, {
-    x: e.x,
-    y: e.y,
-  });
-});
 
 export default CustomCursor;

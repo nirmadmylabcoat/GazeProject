@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import Header from "../components/Global/Header.jsx";
 import itemData from "../components/ProductList/Data.jsx";
@@ -6,7 +6,7 @@ import CustomCursor from "../components/Global/CustomCursor";
 import Transition from "../Transition";
 import { FaStoreAlt } from "react-icons/fa";
 import { TbTruckDelivery } from "react-icons/tb";
-
+import { LiaShoppingBagSolid } from "react-icons/lia";
 
 const ProductDisplay = () => {
   const { id } = useParams();
@@ -14,6 +14,9 @@ const ProductDisplay = () => {
   const item = itemData.find((item) => {
     return item.id === parseInt(id);
   });
+
+  const [size, setSize] = useState("XS");
+
   return (
     <>
       <CustomCursor />
@@ -59,24 +62,72 @@ const ProductDisplay = () => {
               <div>
                 <p className="text-xl">Sizes</p>
               </div>
-              <div className="flex gap-x-[1rem]">
-                <div className="text-2xl border-solid border-gray-400 hover:border-gray-600 transition-all duration-300 border-[1px] px-[32px] py-[10px]">XS</div>
-                <div className="text-2xl border-solid border-gray-400 hover:border-gray-600 transition-all duration-300 border-[1px] px-[32px] py-[10px]">S</div>
-                <div className="text-2xl border-solid border-gray-400 hover:border-gray-600 transition-all duration-300 border-[1px] px-[32px] py-[10px]">M</div>
-                <div className="text-2xl border-solid border-gray-400 hover:border-gray-600 transition-all duration-300 border-[1px] px-[32px] py-[10px]">L</div>
-                <div className="text-2xl border-solid border-gray-400 hover:border-gray-600 transition-all duration-300 border-[1px] px-[32px] py-[10px]">XL</div>
+              <div className="flex gap-x-[1rem] w-[43.5rem]">
+                <div
+                  className={`text-2xl border-solid border-gray-400 hover:border-gray-600 transition-all duration-300 border-[1px] px-[32px] py-[10px] ${
+                    size == "XS" ? "bg-black text-white" : ""
+                  }`}
+                  onClick={() => setSize("XS")}
+                >
+                  XS
+                </div>
+                <div
+                  className={`text-2xl border-solid border-gray-400 hover:border-gray-600 transition-all duration-300 border-[1px] px-[32px] py-[10px] ${
+                    size == "S" ? "bg-black text-white" : ""
+                  }`}
+                  onClick={() => setSize("S")}
+                >
+                  {" "}
+                  S
+                </div>
+                <div
+                  className={`text-2xl border-solid border-gray-400 hover:border-gray-600 transition-all duration-300 border-[1px] px-[32px] py-[10px] ${
+                    size == "M" ? "bg-black text-white" : ""
+                  }`}
+                  onClick={() => setSize("M")}
+                >
+                  {" "}
+                  M
+                </div>
+                <div
+                  className={`text-2xl border-solid border-gray-400 hover:border-gray-600 transition-all duration-300 border-[1px] px-[32px] py-[10px] ${
+                    size == "L" ? "bg-black text-white" : ""
+                  }`}
+                  onClick={() => setSize("L")}
+                >
+                  {" "}
+                  L
+                </div>
+                <div
+                  className={`text-2xl border-solid border-gray-400 hover:border-gray-600 transition-all border-[1px] px-[32px] py-[10px] ${
+                    size == "XL" ? "bg-black text-white" : ""
+                  }`}
+                  onClick={() => setSize("XL")}
+                >
+                  {" "}
+                  XL
+                </div>
               </div>
             </div>
-            <div className="flex justify-center w-full border-[4px] bg-black text-white text-[1.5rem] px-20 py-8 hover:bg-gray-700 transition-all">Add To Cart</div>
+            <div className="flex justify-center items-center w-[43.5rem] border-[4px] bg-black text-white text-[1.5rem] px-20 py-8 hover:shadow-2xl hover:scale-[1.01] transition-all duration-500">
+              <div>
+                <LiaShoppingBagSolid className="w-20 h-10" />
+              </div>
+              <div>Add To Cart</div>
+            </div>
             <div className="flex flex-col gap-y-2">
               <div className="text-xl flex items-center gap-x-4">
-                <div><FaStoreAlt /></div>
+                <div>
+                  <FaStoreAlt />
+                </div>
                 <div>Available in stores</div>
               </div>
               <div className="text-xl flex items-center gap-x-4">
-                <div className="text-2xl"><TbTruckDelivery /></div>
-                <div>Delivery Time : 2-7 days</div>
+                <div className="text-2xl">
+                  <TbTruckDelivery />
                 </div>
+                <div>Delivery Time : 2-7 days</div>
+              </div>
             </div>
           </div>
         </div>
