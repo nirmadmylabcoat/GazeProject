@@ -12,6 +12,7 @@ import WomenShop from "./pages/WomenShop.jsx";
 import MenShop from "./pages/MenShop.jsx";
 import ScrollToTop from "./components/Global/ScrollToTop.jsx";
 import Trending from "./pages/Trending.jsx";
+import ProductDisplay from "./pages/ProductDisplay.jsx"
 
 function App() {
   const location = useLocation(); // This call is within the Router component
@@ -24,6 +25,7 @@ function App() {
           <Route path="/womenshop" element={<WomenShop />} />
           <Route path="/menshop" element={<MenShop />} />
           <Route path="/trending" element = {<Trending />}></Route>
+          <Route path="/product/:id" element = {<ProductDisplay />}></Route>
         </Routes>
       </ScrollToTop>
     </AnimatePresence>
