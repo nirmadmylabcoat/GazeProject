@@ -70,13 +70,34 @@ const cards = [
     id: 1,
   },
   {
+    url: "/images/model7b.jpg",
+    title: "Casual Printed Tshirt",
+    id: 7,
+  },
+  {
     url: "/images/model2b.webp",
-    title: "sports wear",
+    title: "Blue Sports wear",
     id: 2,
   },
   {
+    url: "/images/model6b.jpg",
+    title: "Brown Hoodie",
+    id: 6,
+  },
+  {
     url: "/images/model3b.webp",
-    title: "sports wear",
+    title: "Yellow Hoodie",
     id: 3,
   },
+  {
+    url: "/images/model5b.jpg",
+    title: "Denim Shirt",
+    id: 5,
+  },
+  {
+    url: "/images/model4b.webp",
+    title: "Green Satin Shirt",
+    id: 4,
+  },
+
 ];
