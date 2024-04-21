@@ -13,6 +13,8 @@ import MenShop from "./pages/MenShop.jsx";
 import ScrollToTop from "./components/Global/ScrollToTop.jsx";
 import Trending from "./pages/Trending.jsx";
 import ProductDisplay from "./pages/ProductDisplay.jsx"
+import AboutUs from "./pages/AboutUs.jsx";
+import Checkout from "./pages/Checkout.jsx";
 
 function App() {
   const location = useLocation(); // This call is within the Router component
@@ -26,6 +28,8 @@ function App() {
           <Route path="/menshop" element={<MenShop />} />
           <Route path="/trending" element = {<Trending />}></Route>
           <Route path="/product/:id" element = {<ProductDisplay />}></Route>
+          <Route path="/about" element = {<AboutUs />}></Route>
+          <Route path="/cart" element ={<Checkout />}></Route>
         </Routes>
       </ScrollToTop>
     </AnimatePresence>

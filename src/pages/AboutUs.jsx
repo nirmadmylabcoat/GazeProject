@@ -1,12 +1,18 @@
 import React from 'react';
+import CustomCursor from '../components/Global/CustomCursor';
+import Header from '../components/Global/Header';
 
-const BackgroundVideoPage = () => {
+const AboutUs = () => {
   return (
+    <>
+    <CustomCursor />
+    <Header />
     <div className="relative h-screen">
-      <video autoPlay muted loop className="absolute top-0 left-0 w-full h-full object-cover">
-        <source src="background-video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+        <div class="wrap">
+        <video width="auto" height="400px" autoplay="" loop="" muted="" />
+        <source src="modelaboutus.mp4"  type="video/mp4" />
+        <source src="Video.ogg" type="video/ogg" />
+    </div>
       <div className="absolute inset-0 flex items-center justify-center text-white">
         <div className="text-center">
           {/* Your page content goes here */}
@@ -15,7 +21,8 @@ const BackgroundVideoPage = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
-export default BackgroundVideoPage;
+export default AboutUs;
