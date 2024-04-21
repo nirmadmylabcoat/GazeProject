@@ -483,8 +483,8 @@ const itemData = [
     type: "hoodies and coats",
     name: "Double Faced Jacket ",
     description: "Off White Button Up Shirt",
-    image: model52a,
-    imageHover: model52b,
+    image: model52b,
+    imageHover: model52a,
     price: "1499",
   },
   {
@@ -493,8 +493,8 @@ const itemData = [
     type: "jeans and trousers",
     name: "Brown Tailored Trousers",
     description: "Off White Button Up Shirt",
-    image: model21a,
-    imageHover: model21b,
+    image: model21b,
+    imageHover: model21a,
     price: "799",
   },
   {
