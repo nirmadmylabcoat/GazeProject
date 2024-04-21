@@ -24,7 +24,7 @@ function ProductList({ gender }) {
                 <img
                   src={hovered === index ? item.imageHover : item.image}
                   alt={item.name}
-                  className="h-full object-cover"
+                  className="h-[450px] w-[600px] object-cover"
                 />
               </div>
               <Link to={`/product/${item.id}`}>
