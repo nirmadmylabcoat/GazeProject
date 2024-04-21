@@ -7,16 +7,24 @@ import Transition from "../Transition";
 import { FaStoreAlt } from "react-icons/fa";
 import { TbTruckDelivery } from "react-icons/tb";
 import { LiaShoppingBagSolid } from "react-icons/lia";
+import { ToastContainer, toast,Slide } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const ProductDisplay = () => {
-  // let updatedCart = []
-  // const addToCart = (productId,productSize) => {
-  //   updatedCart.push(productSize)
-  //   console.log(updatedCart)
-  //   localStorage.setItem(productId, updatedCart);
+const ProductDisplay = () => {  
 
-  // };
-  
+  const notify = () => {
+    toast.success('Added to cart', {
+      position: "top-center",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      transition: Slide,
+      });
+  }
 
   function addToCart(productId,productSize){
     let prevCart = localStorage.getItem("cart")
@@ -34,13 +42,15 @@ const ProductDisplay = () => {
       else{
         prevCart[productId] = productSize
       }
-      localStorage.setItem("cart",JSON.stringify(prevCart))
+      localStorage.setItem("cart",JSON.stringify(prevCart));
+
     }
     else{
       let cart = {}
       cart[productId] = [productSize]
-      localStorage.setItem("cart",JSON.stringify(cart))
+      localStorage.setItem("cart",JSON.stringify(cart));
     }
+    notify();
   }
   
 
@@ -168,6 +178,7 @@ const ProductDisplay = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </>
   );
 };
