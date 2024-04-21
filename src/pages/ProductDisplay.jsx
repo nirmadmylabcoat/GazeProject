@@ -68,7 +68,7 @@ const ProductDisplay = () => {
       <CustomCursor />
       <Header delay={"0"} duration={"0"} />
       <div className="w-[100vw] flex justify-center">
-        <div className="w-[90vw] flex gap-x-20 mt-10 mb-10">
+        <div className="w-[90vw] flex lg:flex-row gap-x-20 mt-10 mb-10 flex-col sm:gap-10">
           <div
             className="h-[75vh] flex gap-x-2"
             // onMouseEnter={() => setHovered(index)} // Set this item as hovered
@@ -84,10 +84,10 @@ const ProductDisplay = () => {
               // src={hovered === index ? item.imageHover : item.image}
               src={item.imageHover}
               alt={item.name}
-              className="h-full w-[400px] object-cover"
+              className="h-full w-[400px] object-cover hidden md:block"
             />
           </div>
-          <div className="flex flex-col gap-y-8 max-w-[30vw]">
+          <div className="flex flex-col gap-y-8 lg:w-[30vw] sm:w-[55vw]">
             <div className="flex flex-col gap-y-[0.25rem]">
               <div className="font-semibold text-[3rem] text-gray-800">
                 {item.name}
@@ -101,7 +101,7 @@ const ProductDisplay = () => {
                 </p>
               </div>
             </div>
-            <div className="font-medium text-gay-800 text-2xl flex ">
+            <div className="font-medium text-gray-800 text-2xl flex ">
               {item.description}
             </div>
             <div className="flex flex-col gap-y-2">
