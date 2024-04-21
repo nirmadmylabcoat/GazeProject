@@ -67,37 +67,51 @@ const cards = [
   {
     url: "/images/model1b.webp",
     title: "SATIN PINK BODYCON DRESS",
-    id: 1,
+    id: 10,
   },
   {
-    url: "/images/model7b.jpg",
-    title: "Casual Printed Tshirt",
-    id: 7,
+    url: "/images/model7b.png",
+    title: "Casual Printed shirt",
+    id: 43,
   },
   {
-    url: "/images/model2b.webp",
-    title: "Blue Sports wear",
+    url: "/images/model42a.png",
+    title: "biege sleeveless vest",
+    id: 45,
+  },
+  {
+    url: "/images/model33a.png",
+    title: "distressed denim shorts",
+    id: 31,
+  },
+  {
+    url: "/images/model6b.png",
+    title: "Brown Hoodie",
+    id: 40,
+  },
+  {
+    url: "/images/model30b.png",
+    title: "white corset top",
+    id: 22,
+  },
+  {
+    url: "/images/model22a.png",
+    title: "white oversized pullover",
     id: 2,
   },
   {
-    url: "/images/model6b.jpg",
-    title: "Brown Hoodie",
-    id: 6,
-  },
-  {
-    url: "/images/model3b.webp",
-    title: "Yellow Hoodie",
-    id: 3,
-  },
-  {
-    url: "/images/model5b.jpg",
-    title: "Denim Shirt",
-    id: 5,
-  },
-  {
-    url: "/images/model4b.webp",
-    title: "Green Satin Shirt",
+    url: "/images/model23a.png",
+    title: "cocoa sweatshirt dress",
     id: 4,
   },
-
+  {
+    url: "/images/model21b.png",
+    title: "black zipper jacket",
+    id: 45,
+  },
+  {
+    url: "/images/model9b.png",
+    title: "rugrats oversized tee",
+    id: 45,
+  },
 ];

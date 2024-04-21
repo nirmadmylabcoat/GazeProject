@@ -490,8 +490,8 @@ const itemData = [
   {
     id: 38,
     gender: "men",
-    type: "jeans and trousers",
-    name: "Brown Tailored Trousers",
+    type: "hoodies and coats",
+    name: "jet black zipper jacket",
     description: "Off White Button Up Shirt",
     image: model21b,
     imageHover: model21a,
