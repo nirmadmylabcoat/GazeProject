@@ -40,7 +40,7 @@ const ProductDisplay = () => {
         }
       }
       else{
-        prevCart[productId] = productSize
+        prevCart[productId] = [productSize]
       }
       localStorage.setItem("cart",JSON.stringify(prevCart));
 

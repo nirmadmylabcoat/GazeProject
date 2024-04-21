@@ -17,7 +17,7 @@ const ShopBanner = () => {
           <div>
             <img src="/images/modelman.jpg" alt="men" />
           </div>
-          <div className="z-10 border-[4px] top-[80%] absolute border-solid border-white text-white text-[2.5rem] px-20 py-8 transition-all hover:bg-white hover:border-white hover:text-black">
+          <div className="z-10 border-4 top-[80%] md:top-[80%] absolute border-solid border-white text-white text-2xl md:text-3xl px-8 md:px-20 py-4 md:py-8 transition-all hover:bg-white hover:border-white hover:text-black">
             <Link to="/menshop">Shop Men</Link>
           </div>
         </div>
@@ -27,7 +27,7 @@ const ShopBanner = () => {
           <div>
             <img src="/images/modelwoman.jpg" alt="women" />
           </div>
-          <div className="z-10 border-[4px] top-[80%] absolute border-solid border-white text-white text-[2.5rem] px-20 py-8 transition-all hover:bg-white hover:border-white hover:text-black">
+          <div className="z-10 border-4 top-[80%] md:top-[80%] absolute border-solid border-white text-white text-2xl md:text-3xl px-8 md:px-20 py-4 md:py-8 transition-all hover:bg-white hover:border-white hover:text-black">
             <Link to="/womenshop">Shop Women</Link>
           </div>
         </div>

@@ -27,7 +27,7 @@ const Scroll = () => {
   return (
     <section ref={targetRef} className="relative h-[300vh] bg-neutral-900">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-        <span className="font-semibold uppercase text-neutral-500 text-[12rem] ml-4">
+        <span className="font-semibold uppercase text-neutral-500 md:text-[12rem] ml-4 text-[7rem]">
           TRENDING COLLECTION
         </span>
         <motion.div style={{ x }} className="flex gap-4">
