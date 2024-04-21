@@ -13,6 +13,9 @@ const Header = ({bgColor, delay,duration}) => {
         <Link className="logo" to = "/" >gaze.</Link>
         <nav className="nav">
           <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
             <Link to="/menshop">Men</Link>
           </li>
           <li>
@@ -23,9 +26,6 @@ const Header = ({bgColor, delay,duration}) => {
           </li>
           <li>
             <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/why">Why choose us?</Link>
           </li>
         </nav>
         <div className="contact">

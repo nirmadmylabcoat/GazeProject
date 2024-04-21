@@ -4,6 +4,7 @@ import MenHero from "../components/MenShop/MenHero";
 import Header from "../components/Global/Header";
 import Transition from "../Transition";
 import ProductList from "../components/ProductList/ProductList";
+import Search from "../components/ProductList/Search";
 
 
 const WomenShop = () => {
@@ -12,6 +13,7 @@ const WomenShop = () => {
     <CustomCursor />
       <Header bgColor={"#906750"} delay={"0"} duration={"0"}/>
       <MenHero />
+      <Search />
       <ProductList gender={"men"}/>
     </>
   );
