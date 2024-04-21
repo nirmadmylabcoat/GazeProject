@@ -9,6 +9,42 @@ import { TbTruckDelivery } from "react-icons/tb";
 import { LiaShoppingBagSolid } from "react-icons/lia";
 
 const ProductDisplay = () => {
+  // let updatedCart = []
+  // const addToCart = (productId,productSize) => {
+  //   updatedCart.push(productSize)
+  //   console.log(updatedCart)
+  //   localStorage.setItem(productId, updatedCart);
+
+  // };
+  
+
+  function addToCart(productId,productSize){
+    let prevCart = localStorage.getItem("cart")
+    if(prevCart){
+      prevCart = JSON.parse(prevCart)
+      if(productId in prevCart)
+      {
+        if(prevCart[productId].includes(productSize) ){
+          console.log("check");
+        }
+        else{
+          prevCart[productId] = [...prevCart[productId],productSize]
+        }
+      }
+      else{
+        prevCart[productId] = productSize
+      }
+      localStorage.setItem("cart",JSON.stringify(prevCart))
+    }
+    else{
+      let cart = {}
+      cart[productId] = [productSize]
+      localStorage.setItem("cart",JSON.stringify(cart))
+    }
+  }
+  
+
+
   const { id } = useParams();
   // const [hovered, setHovered] = useState(null);
   const item = itemData.find((item) => {
@@ -109,7 +145,7 @@ const ProductDisplay = () => {
                 </div>
               </div>
             </div>
-            <div className="flex justify-center items-center w-[43.5rem] border-[4px] bg-black text-white text-[1.5rem] px-20 py-8 hover:shadow-2xl hover:scale-[1.01] transition-all duration-500">
+            <div className="flex justify-center items-center w-[43.5rem] border-[4px] bg-black text-white text-[1.5rem] px-20 py-8 hover:shadow-2xl hover:scale-[1.01] transition-all duration-500" onClick={() => addToCart(item.id,size)}>
               <div>
                 <LiaShoppingBagSolid className="w-20 h-10" />
               </div>
