@@ -29,7 +29,7 @@ const AboutUs = () => {
             />
           </video>
           <div className="text-white flex flex-col  gap-y-4 items-center justify-center z-100 w-[70vw] h-screen absolute">
-            <div className="font-bold text-5xl border-solid border-b py-4 border-white">About Us</div>
+            <div className="font-semibold text-5xl border-solid border-b py-4 border-white">About Us</div>
             <div className="font-light text-3xl text-center py-10">
               Welcome to Gaze, the epitome of inclusive fashion. Here, we
               believe that style knows no bounds, and our carefully curated
