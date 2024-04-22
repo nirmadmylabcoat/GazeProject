@@ -486,7 +486,7 @@ const itemData = [
     id: 38,
     gender: "men",
     type: "hoodies and coats",
-    name: "jet black zipper jacket",
+    name: "Jet Black Zipper Jacket",
     description: "Embrace urban sophistication with Gaze's collection of men's hoodies and coats. From sleek city styles to rugged outdoor essentials, our selection combines warmth and style effortlessly. Crafted with the modern man in mind, each piece is designed to elevate your winter wardrobe with ease, ensuring you stay cozy without compromising on fashion-forward aesthetics.",
     image: model21b,
     imageHover: model21a,

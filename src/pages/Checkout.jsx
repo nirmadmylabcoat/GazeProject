@@ -11,22 +11,22 @@ function Checkout() {
       <div className="w-[100vw] flex justify-center">
         <div className="w-[90vw] flex flex-col justify-center mt-20 mb-20">
           {/* heading */}
-          <div className="mb-[40px] text-7xl font-bold text-gray-800">
+          <div className="mb-[40px] text-7xl font-bold ">
             Shopping Cart
           </div>
 
           {/* product header */}
           <div className="w-[90vw] flex justify-between px-20 py-10 bg-gray-200">
-            <div className="text-2xl font-medium text-gray-700 w-[60%]">
+            <div className="text-2xl font-medium w-[60%]">
               PRODUCT
             </div>
             <div className="flex justify-between w-[40%]">
-              <div className="text-2xl font-medium text-gray-700">PRICE</div>
+              <div className="text-2xl font-medium ">PRICE</div>
               <div className="flex justify-between w-[55%]">
-                <div className=" text-2xl font-medium text-gray-700">
+                <div className=" text-2xl font-medium ">
                   QUANTITY
                 </div>
-                <div className=" text-2xl font-medium text-gray-700">
+                <div className=" text-2xl font-medium ">
                   SUBTOTAL
                 </div>
               </div>
@@ -36,7 +36,7 @@ function Checkout() {
           <div className="flex justify-between w-[90vw]">
             {/* form */}
             <div className="mt-20 w-[44vw] py-20 flex flex-col gap-y-5 bg-gray-200 justify-center items-center">
-              <p className="text-3xl text-gray-700 font-medium mb-5">
+              <p className="text-3xl font-medium mb-5">
                 Please Fill In Your Details
               </p>
               <div className="flex w-[90%] gap-x-2 items-center">
@@ -63,7 +63,7 @@ function Checkout() {
             </div>
 
             {/* order */}
-            <div className="mt-20 w-[44vw] px-20 py-20 flex flex-col gap-y-[3vh] bg-gray-200 justify-center">
+            <div className="mt-20 text-xl w-[44vw] px-20 py-20 flex flex-col gap-y-[3vh] bg-gray-200 justify-center">
                 <div className="flex justify-between">
                     <div>Subtotal</div>
                     <div>Rs.</div>

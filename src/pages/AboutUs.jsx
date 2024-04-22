@@ -1,28 +1,55 @@
-import React from 'react';
-import CustomCursor from '../components/Global/CustomCursor';
-import Header from '../components/Global/Header';
+import React from "react";
+import CustomCursor from "../components/Global/CustomCursor";
+import Header from "../components/Global/Header";
+import modelsaboutus from "/images/modelsaboutus.mp4";
+import Transition from "../Transition";
 
 const AboutUs = () => {
   return (
     <>
-    <CustomCursor />
-    <Header />
-    <div className="relative h-screen">
-        <div class="wrap">
-        <video width="auto" height="400px" autoplay="" loop="" muted="" />
-        <source src="modelaboutus.mp4"  type="video/mp4" />
-        <source src="Video.ogg" type="video/ogg" />
-    </div>
-      <div className="absolute inset-0 flex items-center justify-center text-white">
-        <div className="text-center">
-          {/* Your page content goes here */}
-          <h1 className="text-4xl font-bold mb-4">Welcome to My Website</h1>
-          <p className="text-lg">This is some content on my page.</p>
+      <CustomCursor />
+      <Header delay={"0"} duration={"0"} />
+      <div className="w-full h-full">
+        <div className="flex justify-center">
+          <video
+            autoPlay
+            loop
+            muted
+            className="w-full h-full opacity-75"
+          >
+            <source
+              src={modelsaboutus}
+              type="video/mp4"
+              className="w-full h-full"
+            />
+            <source
+              src={modelsaboutus}
+              type="video/ogg"
+              className="w-full h-full"
+            />
+          </video>
+          <div className="text-white flex flex-col  gap-y-4 items-center justify-center z-100 w-[70vw] h-screen absolute">
+            <div className="font-bold text-5xl border-solid border-b py-4 border-white">About Us</div>
+            <div className="font-light text-3xl text-center py-10">
+              Welcome to Gaze, the epitome of inclusive fashion. Here, we
+              believe that style knows no bounds, and our carefully curated
+              collection of trendy and chic outfits reflects just that. From the
+              streets to the runway, we ensure that every body type is
+              celebrated and catered to, empowering individuals to embrace their
+              unique style with confidence. Embracing diversity is at the heart
+              of what we do, and our commitment to inclusivity shines through in
+              our campaigns, where models from every race grace our showcases.
+              Whether you're seeking sleek urban designs or elegant evening
+              wear, Gaze offers a diverse range of styles to suit every taste
+              and occasion. Join us on a journey of self-expression and
+              empowerment through fashion, where every individual is not only
+              seen but celebrated.
+            </div>
+          </div>
         </div>
       </div>
-    </div>
     </>
   );
 };
 
-export default AboutUs;
+export default Transition(AboutUs);
