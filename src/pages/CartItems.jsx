@@ -1,17 +1,7 @@
 import React, { useState, useEffect } from "react";
 import itemData from "../components/ProductList/Data";
-import CustomCursor from "../components/Global/CustomCursor";
 
-// Define a mapping between size numbers and letters
-const sizeMapping = {
-  0: "XS",
-  1: "S",
-  2: "M",
-  3: "L",
-  4: "XL",
-};
-
-const CartItems = () => {
+const CartItems = (props) => {
   const [cart, setCart] = useState({});
   const [inputValues, setInputValues] = useState({});
   const [total, setTotal] = useState(0); // State to store the total
@@ -30,16 +20,26 @@ const CartItems = () => {
     }
   }, []);
 
+  const sizeMapping = {
+    XS: "XS",
+    S: "S",
+    M: "M",
+    L: "L",
+    XL: "XL",
+  };
+
   const productsInCart = Object.entries(cart).flatMap(([id, sizes]) => {
     const product = itemData.find((item) => item.id.toString() === id);
     return product
-      ? Object.entries(sizes).map(([size, _]) => ({
-          ...product,
+      ? sizes.map((size) => ({
+          id: product.id,
           size: sizeMapping[size],
-          quantity: 1, // Default quantity since not stored in local storage
+          ...product,
         }))
       : [];
   });
+
+  console.log(productsInCart);
 
   useEffect(() => {
     // Calculate total
@@ -50,6 +50,7 @@ const CartItems = () => {
       return acc + price * quantity;
     }, 0);
     setTotal(newTotal);
+    props.updateTotal(newTotal);
   }, [inputValues, cart]);
 
   const handleInputChange = (id, size, value) => {
@@ -64,12 +65,30 @@ const CartItems = () => {
     return `Rs. ${numericPrice * quantity}`;
   };
 
+  const removeButton = (id, size) => {
+    const updatedCart = { ...cart };
+    if (updatedCart[id]) {
+      // Remove the specified size from the sizes array
+      updatedCart[id] = updatedCart[id].filter((itemSize) => itemSize !== size);
+
+      // Check if the item has no sizes left and remove the item entirely from the cart
+      if (updatedCart[id].length === 0) {
+        delete updatedCart[id];
+      }
+
+      setCart(updatedCart); // Update the cart state
+      localStorage.setItem("cart", JSON.stringify(updatedCart)); // Update local storage
+    }
+  };
+
   return (
     <div className="">
-      <CustomCursor />
       <div className="flex flex-col items-center">
         {productsInCart.map((item) => (
-          <div className="flex flex-col gap-10 py-9 md:flex-row md:justify-between border-b-[1px] border-solid border-gray-400 w-[92%]" key={`${item.id}_${item.size}`}>
+          <div
+            className="flex flex-col gap-10 py-9 md:flex-row md:justify-between border-b-[1px] border-solid border-gray-400 w-[92%]"
+            key={`${item.id}_${item.size}`}
+          >
             <div className="flex items-center gap-10 w-[59%]">
               <img
                 src={item.image}
@@ -78,7 +97,10 @@ const CartItems = () => {
               />
               <div>
                 <p className="text-gray-600">{`${item.name} - ${item.size}`}</p>
-                <button className="text-lg text-gray-500 hover:text-gray-700 transition-all">
+                <button
+                  className="text-lg text-gray-500 hover:text-gray-700 transition-all"
+                  onClick={() => removeButton(item.id, item.size)}
+                >
                   Remove
                 </button>
               </div>
@@ -147,13 +169,8 @@ const CartItems = () => {
               </div>
             </div>
           </div>
-
         ))}
       </div>
-      <div className="">
-        <p>Total: Rs. {total.toFixed(2)}</p>
-      </div>
-
     </div>
   );
 };
