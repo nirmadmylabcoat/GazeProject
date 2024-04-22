@@ -15,7 +15,6 @@ import Trending from "./pages/Trending.jsx";
 import ProductDisplay from "./pages/ProductDisplay.jsx"
 import AboutUs from "./pages/AboutUs.jsx";
 import Checkout from "./pages/Checkout.jsx";
-import Trial from "./pages/Trial.jsx"
 
 function App() {
   const location = useLocation(); // This call is within the Router component
@@ -31,7 +30,6 @@ function App() {
           <Route path="/product/:id" element = {<ProductDisplay />}></Route>
           <Route path="/about" element = {<AboutUs />}></Route>
           <Route path="/cart" element ={<Checkout />}></Route>
-          <Route path="/trial" element ={<Trial />}></Route>
         </Routes>
       </ScrollToTop>
     </AnimatePresence>
