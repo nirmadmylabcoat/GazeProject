@@ -50,7 +50,7 @@ const CartItems = (props) => {
       return acc + price * quantity;
     }, 0);
     setTotal(newTotal);
-    props.updateTotal(newTotal);
+    props.updateTotal(newTotal,productsInCart);
   }, [inputValues, cart]);
 
   const handleInputChange = (id, size, value) => {

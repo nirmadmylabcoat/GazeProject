@@ -107,11 +107,11 @@ const cards = [
   {
     url: "/images/model21b.png",
     title: "black zipper jacket",
-    id: 45,
+    id: 90,
   },
   {
     url: "/images/model9b.png",
     title: "rugrats oversized tee",
-    id: 45,
+    id: 91,
   },
 ];
