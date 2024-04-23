@@ -9,23 +9,23 @@ const AboutUs = () => {
     <>
       <CustomCursor />
       <Header delay={"0"} duration={"0"} />
-      <div className="w-full h-full">
+      <div className="w-full h-screen">
         <div className="flex justify-center">
           <video
             autoPlay
             loop
             muted
-            className="w-full h-full opacity-75"
+            className="w-full h-screen opacity-75 object-cover"
           >
             <source
               src={modelsaboutus}
               type="video/mp4"
-              className="w-full h-full"
+              className="w-full h-screen"
             />
             <source
               src={modelsaboutus}
               type="video/ogg"
-              className="w-full h-full"
+              className="w-full h-screen"
             />
           </video>
           <div className="text-white flex flex-col  gap-y-4 items-center justify-center z-100 w-[70vw] h-screen absolute">
