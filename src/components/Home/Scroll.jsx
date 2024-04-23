@@ -27,7 +27,7 @@ const Scroll = () => {
   return (
     <section ref={targetRef} className="relative h-[300vh] bg-neutral-900">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-        <span className="font-semibold uppercase text-neutral-500 md:text-[12rem] ml-4 text-[7rem]">
+        <span className="font-semibold uppercase text-neutral-500 md:text-[12rem] sm:text-[5rem] ml-4 text-[7rem]">
           TRENDING COLLECTION
         </span>
         <motion.div style={{ x }} className="flex gap-4">
@@ -44,7 +44,7 @@ const Card = ({ card }) => {
   return (
     <div
       key={card.id}
-      className="group relative h-[450px] w-[450px] overflow-hidden bg-neutral-200">
+      className="group relative h-[450px] w-[450px] sm:h-[100px] sm:w-[100px] overflow-hidden bg-neutral-200">
       <div
         style={{
           backgroundImage: `url(${card.url})`,
