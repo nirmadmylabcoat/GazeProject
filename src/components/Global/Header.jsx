@@ -39,7 +39,7 @@ const Header = ({ bgColor, delay, duration }) => {
           <Link to="/cart">Shopping Cart</Link>
         </div>
         <div className="hamburger-menu" onClick={toggleMenu}>
-          <span></span>
+          <span>Home</span>
           <span></span>
         </div>
       </div>
