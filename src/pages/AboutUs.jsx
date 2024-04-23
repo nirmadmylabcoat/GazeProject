@@ -15,7 +15,7 @@ const AboutUs = () => {
             autoPlay
             loop
             muted
-            className="w-full h-full opacity-75 object-cover"
+            className="w-full h-full absolute  opacity-75 object-cover"
           >
             <source
               src={modelsaboutus}
