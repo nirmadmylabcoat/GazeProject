@@ -1,17 +1,24 @@
-import React from "react";
-import {motion} from "framer-motion";
-import {Link} from 'react-router-dom'
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Link } from 'react-router-dom'
 
-const Header = ({bgColor, delay,duration}) => {
+const Header = ({ bgColor, delay, duration }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const menuClass = isOpen ? "nav active" : "nav";
+
   return (
-    <motion.div className="header" 
-    style={{ backgroundColor: bgColor }}
-    initial={{ opacity: 0, y: -180}}
-    animate={{ opacity: 1, y: 0}}
-    transition={{ ease: "easeInOut", duration: duration, delay: delay}}>
+    <motion.div className="header" style={{ backgroundColor: bgColor }}
+      initial={{ opacity: 0, y: -180 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ ease: "easeInOut", duration: duration, delay: delay }}>
       <div className="header-inner">
-        <Link className="logo" to = "/" >gaze.</Link>
-        <nav className="nav">
+        <Link className="logo" to="/">gaze.</Link>
+        <nav className={menuClass}>
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -31,7 +38,7 @@ const Header = ({bgColor, delay,duration}) => {
         <div className="contact">
           <Link to="/cart">Shopping Cart</Link>
         </div>
-        <div className="hamburger-menu">
+        <div className="hamburger-menu" onClick={toggleMenu}>
           <span></span>
           <span></span>
         </div>
